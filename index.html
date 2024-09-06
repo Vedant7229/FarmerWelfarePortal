@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Welfare Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/0f554ec1f7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>              
+    <header class="main-header">
+        <div class="container">
+            <h1>Farmer Welfare Portal</h1>
+            <nav class="navbar">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <select id="language-select">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="gu">ગુજરાતી</option>
+                    </select>
+                </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#schemes">Schemes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h2>Empowering Farmers</h2>
+            <p>Explore comprehensive welfare schemes for sustainable farming.</p>
+            <div class="search-container">
+                <select id="state-selector">
+                    <option value="gujarat">Gujarat</option>
+                    <option value="rajasthan">Rajasthan</option>
+                </select>
+                <input type="text" id="search" placeholder="Search for schemes...">
+                <button id="search-btn">Search</button>
+                <!-- Voice search button -->
+                <button id="voice-search-btn" title="Voice Search">🎤</button> <!-- Voice command button -->
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="schemes" class="schemes">
+        <div class="container">
+            <h2>Government Schemes</h2>
+            <div id="scheme-list" class="scheme-list">
+                <!-- Scheme items will be injected here -->
+            </div>
+            <div id="details-content" class="details-content">
+                <!-- Scheme details will be injected here -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_container container">
+            <div class="footer_logo">
+                <img src="logo.png" alt="">
+            </div>
+            <div class="link">
+                <h3>Main Links</h3>
+                <ul></ul>
+                    <li>Contact Us</li>
+                    <li>News & Blogs</li>
+                </ul>
+            </div>
+            <div class="link">
+                <h3>Support</h3>
+                <ul>
+                    <li>About Us</li>
+                   
+                    <li>Terms & Condition</li>
+                </ul>
+            </div>
+            <div class="news_letter">
+                <h3>Support</h3>
+                <input type="email" placeholder="Enter your email">
+                <h3>Follow Us</h3>
+                <div class="icon_container">
+                    <div class="icon">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-brands fa-square-x-twitter"></i>
+                    </div>  
+                    <div class="icon">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <div class="icon">  
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

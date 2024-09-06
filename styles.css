@@ -1,0 +1,449 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    cursor: url('https://path-to-your-carrot-image.png'), auto; /* Custom carrot cursor */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+.main-header {
+    background-color: black;
+    color: black;
+    padding: 20px 0;
+    border-bottom: 4px solid #00b894;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    scroll-behavior: smooth;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+
+}
+.navbar ul li a:hover {
+    color: #ffffff; /* White text on hover */
+    background-color: #3498db; /* Blue background on hover */}
+
+/* Language Selector Styling */
+.language-selector {
+    margin-right: auto; /* Pushes the language selector to the left */
+}
+
+.language-selector select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.language-selector select:hover {
+    background-color: #f0f0f0;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(120deg, #3a7bd5 0%, #3a6073 50%, #00c6ff 100%), 
+    url('https://images.unsplash.com/photo-1605325596548-13e97b29f32d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGZpZWxkc3xlbnwwfHx8fDE2NjIzMTIzNjc&ixlib=rb-1.2.1&q=80&w=1080') 
+    no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 2s ease-out;
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: wheat;
+    animation: slideInDown 1.2s ease-out;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero p {
+    font-size: 1.7rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+    color: #bdc3c7;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Growing Plants Animation */
+.growing-plants {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    pointer-events: none;
+}
+
+.plant {
+    width: 50px;
+    height: 100px;
+    background: url('https://path-to-your-plant-image.png') no-repeat center bottom;
+    background-size: contain;
+    opacity: 0;
+    animation: grow 3s ease-out forwards;
+}
+
+.plant-1 {
+    animation-delay: 0.5s;
+}
+
+.plant-2 {
+    animation-delay: 1s;
+}
+
+.plant-3 {
+    animation-delay: 1.5s;
+}
+
+@keyframes grow {
+    from {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    animation: bounceIn 1.8s ease-out;
+}
+
+@keyframes bounceIn {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.search-container select,
+.search-container input[type="text"] {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #1a2e40;
+    transition: all 0.3s ease;
+}
+
+.search-container select:focus,
+.search-container input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-container button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    background-color: #27ae60;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-container button:hover {
+    background-color: #2ecc71;
+    transform: translateY(-3px);
+}
+
+/* Schemes Section */
+.schemes {
+    padding: 60px 20px;
+    background-color: lightgray;
+    color: black;
+}
+
+.schemes h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #3A70AB;
+}
+
+.scheme-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.scheme-item {
+    background-color: #f3f7f9;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    width: 30%;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.scheme-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+#voice-search-btn {
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 30%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+}
+
+#voice-search-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+#voice-search-btn:focus {
+    outline: none;
+}
+/* Container section styling */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    animation: fadeInContainer 1s ease; /* Fade in the container */
+}
+
+@keyframes fadeInContainer {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Slide up */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Set to its original position */
+    }
+}
+
+/* Scheme items styling */
+.scheme-item {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.scheme-item:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+}
+
+/* Buttons inside scheme items */
+.scheme-item .view-details-btn {
+    background-color: #3A70AB;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.scheme-item .view-details-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the scheme details section */
+#details-content {
+    background-color: #f9f9f9; /* Light background for better readability */
+    padding: 20px; /* Padding around content */
+    margin: 20px 0; /* Space between schemes list and details */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    opacity: 0; /* Hidden by default */
+    transform: translateY(20px); /* Position slightly lower for animation */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth transition */
+}
+
+/* When details are active, show the section */
+#details-content.active {
+    opacity: 1; /* Make visible */
+    transform: translateY(0); /* Slide to original position */
+}
+
+/* Heading styling */
+#details-content h3 {
+    color: #333; /* Darker color for title */
+    font-size: 1.8rem; /* Larger font for scheme name */
+    margin-bottom: 10px;
+}
+
+/* Styling for description and documentation details */
+#details-content p {
+    font-size: 1rem; /* Standard font size */
+    line-height: 1.6; /* Better line spacing for readability */
+    color: #555; /* Medium-dark text color */
+}
+
+/* Highlighting "Documentation Required" */
+#details-content p strong {
+    color: #007bff; /* Highlight in a noticeable color */
+}
+
+/* Button styling for closing details (optional) */
+#details-content .close-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#details-content .close-btn:hover {
+    background-color: #0056b3; /* Darken on hover */
+}
+
+/* Animation for the details container */
+@keyframes fadeInDetails {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slide up */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Normal position */
+    }
+}
+.footer_container{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between
+    }
+    .link h3{
+        margin-bottom: 10px;
+        color: gray;
+    }
+    footer{
+        background-color: #fff0db;
+    }
+    .news_letter h3{
+        margin-bottom: 10px;
+        color: gray;    
+    }
+    .link ul{
+        list-style: none;
+    }
+    .icon_container{
+        display: flex;
+        gap: 15px;
+        font-size: 25px;
+    }
+    .link ul li {
+        font-size: 14px;
+        margin-bottom: 5px;
+    
+    }
